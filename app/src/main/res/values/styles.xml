@@ -22,4 +22,16 @@
         <attr name="topDrawableHeight" format="dimension"/>
     </declare-styleable>
 
+
+
+    <declare-styleable name="CornerShapeView">
+
+        <attr name="borderColor" format="color" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="borderRadius" format="dimension" />
+        <attr name="borderXRadius" format="dimension" />
+        <attr name="borderYRadius" format="dimension" />
+    </declare-styleable>
+
+
 </resources>

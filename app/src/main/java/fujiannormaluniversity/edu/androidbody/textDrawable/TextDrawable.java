@@ -99,7 +99,6 @@ public class TextDrawable extends android.support.v7.widget.AppCompatTextView {
             super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         }
 
-        Log.d("onMeasure","onMeasure");
     }
 
     /**

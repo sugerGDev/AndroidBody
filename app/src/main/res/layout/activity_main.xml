@@ -16,6 +16,7 @@
     </fujiannormaluniversity.edu.androidbody.navigationbar.ANavigationBar>
 
 
+    
     <fujiannormaluniversity.edu.androidbody.classes.login.view.LoginTextField
             android:layout_width="0dp"
             android:layout_height="45dp"
@@ -26,9 +27,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/navigaionbar"
+            />
 
-            >
-
-    </fujiannormaluniversity.edu.androidbody.classes.login.view.LoginTextField>
 
 </android.support.constraint.ConstraintLayout>

@@ -14,18 +14,16 @@ public class ANavigationBar extends ConstraintLayout {
     private TextDrawable backButton;
 
     public ANavigationBar(Context context) {
-        super(context);
-        this.onCreateView(context);
+      this(context,null);
     }
 
     public ANavigationBar(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        this.onCreateView(context);
+       this(context,attrs,0);
     }
 
     public ANavigationBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        this.onCreateView(context);
+        this.onLoadView(context);
     }
 
 
@@ -49,7 +47,7 @@ public class ANavigationBar extends ConstraintLayout {
      * 加载View对象
      * @param context object
      */
-    private void onCreateView(Context context) {
+    private void onLoadView(Context context) {
 
         LayoutInflater.from(context).inflate(R.layout.activity_navigaitionbar, this);
         titleTextView = (TextView)findViewById(R.id.navigaiontitle);
