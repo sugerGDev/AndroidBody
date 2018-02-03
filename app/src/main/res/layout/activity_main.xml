@@ -15,4 +15,20 @@
 
     </fujiannormaluniversity.edu.androidbody.navigationbar.ANavigationBar>
 
+
+    <fujiannormaluniversity.edu.androidbody.classes.login.view.LoginTextField
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/login_left_right_margin"
+            android:layout_marginRight="@dimen/login_left_right_margin"
+            android:layout_marginTop="@dimen/login_top_margin"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/navigaionbar"
+
+            >
+
+    </fujiannormaluniversity.edu.androidbody.classes.login.view.LoginTextField>
+
 </android.support.constraint.ConstraintLayout>
