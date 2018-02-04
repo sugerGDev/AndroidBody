@@ -16,8 +16,9 @@
     </fujiannormaluniversity.edu.androidbody.navigationbar.ANavigationBar>
 
 
-    
+
     <fujiannormaluniversity.edu.androidbody.classes.login.view.LoginTextField
+            android:id="@+id/register_phone_inputWidget"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_marginLeft="@dimen/login_left_right_margin"
@@ -27,6 +28,10 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/navigaionbar"
+
+
+            app:title="手机号"
+            app:placeholder="请输入手机号"
             />
 
 

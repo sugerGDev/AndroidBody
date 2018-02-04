@@ -10,5 +10,8 @@
     <color name="text_6">#666666</color>
     <color name="text_9">#999999</color>
     <color name="white">#ffffff</color>
+    <color name="text_4d">#4D4D4D</color>
+    <color name="text_placeholder">#CCCCD2</color>
+    <color name="main">#4D94E8</color>
 
 </resources>
