@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
     private void onSetProperty() {
 
         int inputType = InputType.TYPE_CLASS_PHONE;
-        register_phone_inputWidget.getmInputWidget().getmEditText().setInputType(inputType);
+        register_phone_inputWidget.getEditText().setInputType(inputType);
 
         int imeOptions = EditorInfo.IME_ACTION_NEXT;
-        register_phone_inputWidget.getmInputWidget().getmEditText().setImeOptions(imeOptions);
+        register_phone_inputWidget.getEditText().setImeOptions(imeOptions);
     }
 }

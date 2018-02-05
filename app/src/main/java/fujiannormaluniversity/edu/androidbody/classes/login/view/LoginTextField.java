@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.support.constraint.ConstraintLayout;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.widget.EditText;
 import android.widget.TextView;
 import fujiannormaluniversity.edu.androidbody.R;
 import fujiannormaluniversity.edu.androidbody.inputView.AEditText;
@@ -53,7 +54,7 @@ public class LoginTextField extends ConstraintLayout {
      * 获取 输入控件
      * @return  AEditText 对象
      */
-    public AEditText getmInputWidget() {
-        return mInputWidget;
+    public EditText getEditText() {
+        return mInputWidget.getmEditText();
     }
 }

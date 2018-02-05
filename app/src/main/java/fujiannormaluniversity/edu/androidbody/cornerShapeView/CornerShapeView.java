@@ -35,8 +35,8 @@ public class CornerShapeView extends View {
     }
 
     public CornerShapeView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context,attrs,defStyleAttr);
 
+        super(context,attrs,defStyleAttr);
         onCreateView(context,attrs,defStyleAttr);
     }
 
