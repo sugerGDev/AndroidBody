@@ -43,18 +43,12 @@ public class LoginTextField extends ConstraintLayout {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.LoginTextField);
         try {
             mTitle.setText(typedArray.getString(R.styleable.LoginTextField_title));
-            mInputWidget.setPlaceholder(typedArray.getString(R.styleable.LoginTextField_placeholder));
+            mInputWidget.setHint(typedArray.getString(R.styleable.LoginTextField_placeholder));
         }finally {
             typedArray.recycle();
         }
     }
 
 
-    /**
-     * 获取 输入控件
-     * @return  AEditText 对象
-     */
-    public EditText getEditText() {
-        return mInputWidget.getmEditText();
-    }
+
 }

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import fujiannormaluniversity.edu.androidbody.R;
 import static fujiannormaluniversity.edu.androidbody.utils.OSHelper.dip2px;
+import static fujiannormaluniversity.edu.androidbody.utils.OSHelper.getColor;
 
 public class CornerShapeView extends View {
 
@@ -16,8 +17,6 @@ public class CornerShapeView extends View {
     private int   mborderColor;
     private float mborderRadius;
     private float mborderWidth;
-    private float mborderXRadius;
-    private float mborderYRadius;
 
 
     private float mWidthSize;
@@ -54,10 +53,8 @@ public class CornerShapeView extends View {
 
             //获取所需的控件参数
             mborderRadius = typedArray.getDimension(R.styleable.CornerShapeView_borderRadius, dip2px(context,22.5f));
-            mborderWidth = typedArray.getDimension(R.styleable.CornerShapeView_borderWidth, 0.5f);
-            mborderColor = typedArray.getColor(R.styleable.CornerShapeView_borderColor,Color.parseColor("#e2e2e2"));
-            mborderXRadius = typedArray.getDimension(R.styleable.CornerShapeView_borderXRadius, dip2px(context,-1.f));
-            mborderYRadius = typedArray.getDimension(R.styleable.CornerShapeView_borderYRadius, dip2px(context,-1.f));
+            mborderWidth = typedArray.getDimension(R.styleable.CornerShapeView_borderWidth, 1.f);
+            mborderColor = typedArray.getColor(R.styleable.CornerShapeView_borderColor,getColor(context,R.color.border));
 
 
 
@@ -78,15 +75,12 @@ public class CornerShapeView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        float rx = mborderXRadius == -1.f ? mborderRadius : mborderXRadius;
-        float ry = mborderYRadius == -1.f ? mborderRadius : mborderYRadius;
-
 
         // 画出圆角
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            canvas.drawRoundRect(0.f,0.f,mWidthSize,mHeightSize,rx,ry,mPaint);
+            canvas.drawRoundRect(0.f,0.f,mWidthSize,mHeightSize,mborderRadius,mborderRadius,mPaint);
         }else {
-            canvas.drawRoundRect( new RectF(0.f,0.f,mWidthSize,mHeightSize),rx,ry,mPaint);
+            canvas.drawRoundRect( new RectF(0.f,0.f,mWidthSize,mHeightSize),mborderRadius,mborderRadius,mPaint);
         }
     }
 

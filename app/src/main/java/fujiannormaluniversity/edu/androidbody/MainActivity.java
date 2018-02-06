@@ -20,15 +20,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onLoadView() {
-        register_phone_inputWidget = (LoginTextField)findViewById(R.id.register_phone_inputWidget);
+//        register_phone_inputWidget = (LoginTextField)findViewById(R.id.register_phone_inputWidget);
     }
 
     private void onSetProperty() {
 
-        int inputType = InputType.TYPE_CLASS_PHONE;
-        register_phone_inputWidget.getEditText().setInputType(inputType);
-
-        int imeOptions = EditorInfo.IME_ACTION_NEXT;
-        register_phone_inputWidget.getEditText().setImeOptions(imeOptions);
+//        int inputType = InputType.TYPE_CLASS_PHONE;
+//        register_phone_inputWidget.getEditText().setInputType(inputType);
+//
+//        int imeOptions = EditorInfo.IME_ACTION_NEXT;
+//        register_phone_inputWidget.getEditText().setImeOptions(imeOptions);
     }
 }

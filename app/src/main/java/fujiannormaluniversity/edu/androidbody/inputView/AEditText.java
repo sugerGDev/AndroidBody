@@ -1,52 +1,52 @@
 package fujiannormaluniversity.edu.androidbody.inputView;
 
 import android.content.Context;
-import android.support.constraint.ConstraintLayout;
+import android.graphics.Color;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.widget.EditText;
+import android.view.Gravity;
+import android.view.MotionEvent;
 import fujiannormaluniversity.edu.androidbody.R;
+import fujiannormaluniversity.edu.androidbody.utils.OSHelper;
 
-public class AEditText extends ConstraintLayout {
+public class AEditText extends AppCompatEditText {
 
-    private EditText mEditText;
 
 
     public AEditText(Context context) {
-        this(context, null);
+        super(context);
     }
 
     public AEditText(Context context, AttributeSet attrs) {
-        this(context,attrs,0);
+        super(context,attrs);
+        onCreateView(context,attrs);
     }
 
     public AEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-
-
-
-        onCreateView(context);
-    }
-
-    private void onCreateView(Context context) {
-        LayoutInflater.from(context).inflate(R.layout.activity_edittext,this);
-        mEditText = (EditText) findViewById(R.id.activity_edittext);
-    }
-
-    /**
-     * 设置 placeholder 内容
-     * @param placeholder 指定placeholder
-     */
-    public void setPlaceholder(String placeholder){
-        mEditText.setHint(placeholder);
+        onCreateView(context,attrs);
     }
 
 
-    /**
-     * 获取输入控件
-     * @return 获取EditText对象
-     */
-    public EditText getmEditText() {
-        return mEditText;
+
+
+    private void onCreateView(Context context, AttributeSet attrs) {
+      onSetProperty(context);
     }
+
+    private void onSetProperty(Context context) {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            setBackground(null);
+        }
+        setMaxLines(1);
+        setTextSize(14);
+        setTextColor(OSHelper.getColor(context,R.color.text_3));
+        setHintTextColor(OSHelper.getColor(context,R.color.text_placeholder));
+        setGravity(Gravity.CENTER_HORIZONTAL);
+    }
+
+
 }
