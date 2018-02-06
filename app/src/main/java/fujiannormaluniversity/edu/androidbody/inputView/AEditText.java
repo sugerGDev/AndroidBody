@@ -131,7 +131,7 @@ public class AEditText extends AppCompatEditText {
         // 2. 根据资源ID获取图标资源（转化成Drawable对象）
             Bitmap bitmap;
             if (ic_deleteResID == 0){
-                bitmap  = BitmapFactory.decodeResource(context.getResources(),R.drawable.inputwidget_clean);
+                bitmap  = BitmapFactory.decodeResource(context.getResources(),R.drawable.edittext_clean);
                 ic_delete =  new BitmapDrawable(bitmap);
 
             }else {
