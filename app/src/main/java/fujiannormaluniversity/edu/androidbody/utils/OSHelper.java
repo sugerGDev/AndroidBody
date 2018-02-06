@@ -195,7 +195,6 @@ public abstract class OSHelper {
         return context.getResources().getDrawable(id);
     }
 
-
     public static final int getColor(Context context, int id ){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             return context.getResources().getColor(id, context.getTheme());
