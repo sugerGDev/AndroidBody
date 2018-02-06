@@ -3,8 +3,10 @@ package fujiannormaluniversity.edu.androidbody.classes.login.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.constraint.ConstraintLayout;
+import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 import fujiannormaluniversity.edu.androidbody.R;
@@ -50,5 +52,14 @@ public class LoginTextField extends ConstraintLayout {
     }
 
 
+    /**
+     * 设置当前 keyboard 样式
+     * @param inputType InputType 枚举类型
+     * @param imeOptions EditorInfo 枚举类型
+     */
+    public void setEditTextKeyboardType(int inputType, int imeOptions) {
 
+        mInputWidget.setInputType(inputType);
+        mInputWidget.setImeOptions(imeOptions);
+    }
 }
