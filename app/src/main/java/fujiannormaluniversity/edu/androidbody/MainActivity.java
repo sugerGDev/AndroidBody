@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.inputmethod.EditorInfo;
-import android.widget.EditText;
 import fujiannormaluniversity.edu.androidbody.classes.login.view.LoginTextField;
 
 public class MainActivity extends AppCompatActivity {
