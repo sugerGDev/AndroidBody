@@ -3,19 +3,18 @@ package fujiannormaluniversity.edu.androidbody.classes.login.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.constraint.ConstraintLayout;
-import android.text.InputType;
+import android.transition.Visibility;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.inputmethod.EditorInfo;
-import android.widget.EditText;
+import android.view.View;
 import android.widget.TextView;
 import fujiannormaluniversity.edu.androidbody.R;
-import fujiannormaluniversity.edu.androidbody.inputView.AEditText;
 
 public class LoginTextField extends ConstraintLayout {
 
     private TextView mTitle;
     private AEditText mInputWidget;
+    private ASendSMSButton mSendSMSButton;
 
     public LoginTextField(Context context) {
         this(context,null);
@@ -38,6 +37,8 @@ public class LoginTextField extends ConstraintLayout {
         LayoutInflater.from(context).inflate(R.layout.login_textfield,this);
         mTitle  = (TextView)findViewById(R.id.login_textfield_title);
         mInputWidget  = (AEditText)findViewById(R.id.login_textfield_inputWidge);
+        mSendSMSButton = (ASendSMSButton)findViewById(R.id.login_textfield_sendsms);
+
 
     }
 
@@ -46,6 +47,13 @@ public class LoginTextField extends ConstraintLayout {
         try {
             mTitle.setText(typedArray.getString(R.styleable.LoginTextField_title));
             mInputWidget.setHint(typedArray.getString(R.styleable.LoginTextField_placeholder));
+
+            // 存在sms button
+            boolean smsbtn = typedArray.getBoolean(R.styleable.LoginTextField_smsbtn,false);
+            if ( smsbtn ){
+                setSMSButtonClickListener();
+            }
+
         }finally {
             typedArray.recycle();
         }
@@ -61,5 +69,19 @@ public class LoginTextField extends ConstraintLayout {
 
         mInputWidget.setInputType(inputType);
         mInputWidget.setImeOptions(imeOptions);
+    }
+
+
+    /**
+     * 设置当前发送验证码按钮为有效
+     */
+    public void setSMSButtonClickListener(){
+        mSendSMSButton.setVisibility(View.VISIBLE);
+        mSendSMSButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mSendSMSButton.Start();
+            }
+        });
     }
 }

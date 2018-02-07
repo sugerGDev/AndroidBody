@@ -9,6 +9,8 @@ import fujiannormaluniversity.edu.androidbody.classes.login.view.LoginTextField;
 public class MainActivity extends AppCompatActivity {
 
     private LoginTextField register_phone_inputWidget;
+    private LoginTextField register_sms_inputWidget;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void onLoadView() {
        register_phone_inputWidget = (LoginTextField)findViewById(R.id.register_phone_inputWidget);
+        register_sms_inputWidget = (LoginTextField)findViewById(R.id.register_sms_inputWidget);
+
     }
 
     private void onSetProperty() {
@@ -28,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         int imeOptions = EditorInfo.IME_ACTION_NEXT;
 
         register_phone_inputWidget.setEditTextKeyboardType(inputType,imeOptions);
+        register_sms_inputWidget.setEditTextKeyboardType(inputType,imeOptions);
 
     }
 }

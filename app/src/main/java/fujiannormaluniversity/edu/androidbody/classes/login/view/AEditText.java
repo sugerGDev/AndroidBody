@@ -1,4 +1,4 @@
-package fujiannormaluniversity.edu.androidbody.inputView;
+package fujiannormaluniversity.edu.androidbody.classes.login.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;

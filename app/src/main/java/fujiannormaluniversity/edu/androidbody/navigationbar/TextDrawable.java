@@ -1,4 +1,4 @@
-package fujiannormaluniversity.edu.androidbody.textDrawable;
+package fujiannormaluniversity.edu.androidbody.navigationbar;
 
 import android.content.Context;
 import android.content.res.TypedArray;

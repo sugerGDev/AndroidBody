@@ -36,6 +36,7 @@
     <declare-styleable name="LoginTextField">
         <attr name="title" format ="string" />
         <attr name="placeholder" format="string" />
+        <attr name="smsbtn" format="boolean" />
 
     </declare-styleable>
 
