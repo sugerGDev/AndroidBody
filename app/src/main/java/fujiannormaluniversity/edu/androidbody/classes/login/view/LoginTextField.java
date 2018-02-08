@@ -52,6 +52,9 @@ public class LoginTextField extends ConstraintLayout {
                 setSMSButtonClickListener();
             }
 
+        }catch (Exception e) {
+            e.printStackTrace();
+
         }finally {
             typedArray.recycle();
         }
@@ -73,19 +76,15 @@ public class LoginTextField extends ConstraintLayout {
     /**
      * 设置当前发送验证码按钮为有效
      */
-    public void setSMSButtonClickListener(){
-        try {
-            mSendSMSButton = (ASendSMSButton)findViewById(R.id.login_textfield_sendsms);
-            mSendSMSButton.setVisibility(View.VISIBLE);
-            mSendSMSButton.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mSendSMSButton.Start();
-                }
-            });
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
+    private void setSMSButtonClickListener(){
+        mSendSMSButton = (ASendSMSButton)findViewById(R.id.login_textfield_sendsms);
+        mSendSMSButton.setVisibility(View.VISIBLE);
+        mSendSMSButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mSendSMSButton.Start();
+            }
+        });
 
     }
 }
