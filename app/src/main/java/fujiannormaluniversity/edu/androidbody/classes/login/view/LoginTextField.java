@@ -37,8 +37,6 @@ public class LoginTextField extends ConstraintLayout {
         LayoutInflater.from(context).inflate(R.layout.login_textfield,this);
         mTitle  = (TextView)findViewById(R.id.login_textfield_title);
         mInputWidget  = (AEditText)findViewById(R.id.login_textfield_inputWidge);
-        mSendSMSButton = (ASendSMSButton)findViewById(R.id.login_textfield_sendsms);
-
 
     }
 
@@ -76,12 +74,18 @@ public class LoginTextField extends ConstraintLayout {
      * 设置当前发送验证码按钮为有效
      */
     public void setSMSButtonClickListener(){
-        mSendSMSButton.setVisibility(View.VISIBLE);
-        mSendSMSButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mSendSMSButton.Start();
-            }
-        });
+        try {
+            mSendSMSButton = (ASendSMSButton)findViewById(R.id.login_textfield_sendsms);
+            mSendSMSButton.setVisibility(View.VISIBLE);
+            mSendSMSButton.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mSendSMSButton.Start();
+                }
+            });
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
